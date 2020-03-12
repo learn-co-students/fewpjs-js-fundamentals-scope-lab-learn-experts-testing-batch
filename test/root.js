@@ -6,9 +6,8 @@ const path = require('path');
 
 before(function(done) {
   const js = path.resolve(__dirname, '..', 'index.js');
-  const babelResult = babel.transformFileSync(js, {
-    presets: ['es2015']
-  });
+  const babelResult = babel.transformFileSync(js);
+  console.log(babelResult)
 
   const html = path.resolve(__dirname, '..', 'index.html');
 
